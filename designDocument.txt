@@ -1,0 +1,47 @@
+Team 10
+Nana Agric Farm - Design Document
+1. System Architecture
+The Nana Agric Farm website follows a three-tier architecture:
+
+Presentation Layer (Frontend)
+Built with HTML, CSS, and JavaScript to provide a user-friendly interface.
+Responsive design ensures compatibility across devices.
+Interactive elements like product listings, booking forms, and dynamic overlays.
+
+Application Layer (Backend)
+PHP handles form submissions, user authentication, and database interactions.
+Booking and purchase functionalities are implemented with dynamic modals.
+
+Data Layer (Database)
+MySQL database stores user accounts, orders, product bookings, and product inventory.
+Well-structured database schema ensures efficient data retrieval and storage.
+
+2. Technology Choices & Rationale
+Technology	Reason for Selection
+HTML, CSS, JavaScript	Ensures a smooth, interactive, and responsive user experience.
+
+PHP (Backend)	Lightweight and well-integrated with MySQL, making it suitable for web applications.
+
+MySQL (Database)	Efficient and scalable for storing farm products, bookings, and user information.
+
+3. Core Functionality
+Product Listings: Displayed dynamically from the database.
+User Authentication: Secure login and registration.
+Product booking :users can places orders on the different available products and then then track the status of their bookings
+
+Admin Panel: For managing products, orders, and users.
+
+4. Scalability Considerations
+Database Indexing: Optimized queries using proper indexing to handle large product and order datasets.
+
+Load Balancing: Can distribute traffic across multiple servers if needed.
+
+Modular Codebase: Allows easy expansion for future features like mobile app integration.
+
+5. Performance Enhancements
+Minified CSS & JavaScript: Reduces load time.
+Lazy Loading Images: Improves page speed by loading images only when needed.
+
+6. Security Measures
+Data Validation & Sanitization: Prevents SQL injection and XSS attacks.
+Role-Based Access Control: Restricts unauthorized admin access.
