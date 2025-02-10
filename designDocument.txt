@@ -45,3 +45,5 @@ Lazy Loading Images: Improves page speed by loading images only when needed.
 6. Security Measures
 Data Validation & Sanitization: Prevents SQL injection and XSS attacks.
 Role-Based Access Control: Restricts unauthorized admin access.
+Use of hashed password
+Use of prepared statement: prevents SQL injection
