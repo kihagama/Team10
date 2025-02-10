@@ -47,3 +47,8 @@ Data Validation & Sanitization: Prevents SQL injection and XSS attacks.
 Role-Based Access Control: Restricts unauthorized admin access.
 Use of hashed password
 Use of prepared statement: prevents SQL injection
+
+
+User Behavior Metrics:
+  The system gives the user a display of all products in the market, from which the user selects one of their choice to place an order
+  The system allows one user to make one order at a time
