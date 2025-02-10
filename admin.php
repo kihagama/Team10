@@ -33,6 +33,7 @@ include 'connect.php';
 
         <div class="admin-container">
             <h1 class="admin-header">Welcome, Admin</h1>
+
             <!-- Manage Products booking -->
             <h1>Manage product Orders</h1>
 
@@ -53,6 +54,8 @@ include 'connect.php';
                 <tbody>
                     <?php
                     $result = $conn->query("SELECT * FROM booking");
+
+                    <!--obtain product orders from the database--!>
                     while ($row = $result->fetch_assoc()) { ?>
                         <tr>
                             <td><?php echo $row['id']; ?></td>
