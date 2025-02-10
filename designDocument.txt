@@ -75,3 +75,5 @@ Lines of code(LOC)
   admin_actions.php              (29 loc)
   admin.js                    (10 loc)
   adm.css                    (166 loc)
+  total lines of code,        214 + 62 + 40 + 31 + 42 + 46 + 84 + 37 + 304 + 477 + 160 + 32 + 172 + 61 + 409 + 41 + 15 + 193 + 29 + 10 + 166 
+                              = (2523 loc)
