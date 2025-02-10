@@ -52,3 +52,10 @@ Use of prepared statement: prevents SQL injection
 User Behavior Metrics:
   The system gives the user a display of all products in the market, from which the user selects one of their choice to place an order
   The system allows one user to make one order at a time
+
+Lines of code(LOC)
+  userdashboard.php              (214 loc)
+  updateProfileHandler.php       (62 loc)
+  submit_booking.php              (40 loc)
+  register.php                     (31 l0c)
+  productupdate.php                (42 loc)
