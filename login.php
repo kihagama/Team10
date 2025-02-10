@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysqli_num_rows($result) == 1) {
         $user = mysqli_fetch_assoc($result); // Fetch user data
 
-        // Set session variables
+        // Set session variables.
         $_SESSION['username'] = $user['username'];
         $_SESSION['role'] = $user['role'];
 
