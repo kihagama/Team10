@@ -27,5 +27,5 @@ username: admin
 Password: 1234
 ############
 User:
-uusername:ismael
+username:ismael
 Password: 12345
