@@ -77,3 +77,23 @@ Lines of code(LOC)
   adm.css                    (166 loc)
   total lines of code,        214 + 62 + 40 + 31 + 42 + 46 + 84 + 37 + 304 + 477 + 160 + 32 + 172 + 61 + 409 + 41 + 15 + 193 + 29 + 10 + 166 
                               = (2523 loc)
+
+
+defects 
+| Defect Type                      | Count |
+|----------------------------------|-------|
+| SQL Injection Vulnerability      | 2     |
+| Insecure Password Storage        | 1     |
+| Error Handling                   | 3     |
+| File Upload Vulnerability        | 1     |
+| Cross-Site Scripting (XSS)       | 2     |
+| Session Management               | 1     |
+| Missing Input Validation         | 2     |
+| Total Defects                    | 12    |
+
+
+Defect Density= 12/2523 ==4.756 defects per KLOC
+
+
+
+​
