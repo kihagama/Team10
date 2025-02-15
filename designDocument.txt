@@ -94,6 +94,10 @@ defects
 
 Defect Density= 12/2523 ==4.756 defects per KLOC
 
-
+## Lighthouse Audit Fixes (Date: 2025-02-15),
+we have analyzed the  individual modules of the software using the software metrics of response time (performance) by the help of the lighthouse chrome developer tool and gotten an audit of average  response time being 1.7s thus performance being 67 out of 100.
+The issue being caused by the following main delays
+FontAwesome , external CSS and js  delayed file loading
+Images  which are of large file sizes in ImagesAg folder in the project which take more rendering time
 
 ​
