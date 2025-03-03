@@ -89,6 +89,7 @@ defects
 | Cross-Site Scripting (XSS)       | 2     |
 | Session Management               | 1     |
 | Missing Input Validation         | 2     |
+--------------------------------------------
 | Total Defects                    | 12    |
 
 
