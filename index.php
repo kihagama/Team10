@@ -128,7 +128,7 @@
             </div>
         </div>
     </div>
-    <!-- Custom Alert -->
+    <!-- Custom  Alert -->
     <div id="custom-alert" class="alert-overlay">
         <div class="alert-box">
             <p id="alert-message">This is your alert message!</p>
@@ -170,7 +170,7 @@
     include 'footer.php';
     ?>
 
-    <!-- JavaScript -->
+    <!-- Java Script -->
     <script>
         // Show the custom alert
         function showCustomAlert(message) {
