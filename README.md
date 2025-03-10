@@ -105,7 +105,7 @@ Customer's perspective
      metrics-User satisfaction score (1-5) 
 Business perspective 
 Goal-Increase Sales and Customer Retention
-  Qusetion-How many new users are signing up?
+  Question-How many new users are signing up?
      metrics-Number of new user registrations per month
   Question-How many orders are placed daily?
      metrics-Number of orders per day
