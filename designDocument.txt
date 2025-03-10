@@ -102,3 +102,14 @@ FontAwesome , external CSS and js  delayed file loading
 Images  which are of large file sizes in ImagesAg folder in the project which take more rendering time
 
 ​
+User Engagement Metrics
+
+  Login Count per User:
+    What It Tracks: Each time a user logs in, the function trackUserLogin($userId) logs the event into a user_activity table (with an activity type of 'login').
+    How It's Reported: The function getUserEngagementReport() aggregates these login entries to show the total number of logins per user.
+
+Booking System Metrics
+
+  Booking Status Distribution:
+    What It Tracks: Every booking made is recorded using the function trackBooking($userId, $productId, $status), which logs the booking with its current status (e.g., 'pending', 'confirmed', or 'cancelled').
+    How It's Reported: The function getBookingMetrics() groups and counts the booking records by their status, providing a breakdown of how many bookings are pending, confirmed, or cancelled.
