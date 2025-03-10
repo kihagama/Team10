@@ -32,7 +32,7 @@ Password: 12345
 
 
 
-## MEASUREMENT THEORY
+## measurement theory
 
 User Behavior Metrics:
   The system gives the user a display of all products in the market, from which the user selects one of their choice to place an order
@@ -113,7 +113,7 @@ Goal-Increase Sales and Customer Retention
  Metrics-number of customers with more than 2 oders but on different days
 
 
-## EMPIRICAL INVESTIGATION
+## Empirical investigation
 User Engagement Metrics
 
   Login Count per User:
@@ -127,7 +127,6 @@ Booking System Metrics
     How It's Reported: The function getBookingMetrics() groups and counts the booking records by their status, providing a breakdown of how many bookings are pending, confirmed, or cancelled.
     
 Business Performance
-
 Hypothesis: Increase orders and customer retention.
 Data Collected:  
   Average number of orders per day: 20 (Expected: ≥ 50 orders/day)
@@ -137,7 +136,6 @@ Analysis:
  Orders per day and user registrations are below target. The business strategy may need to focus more on marketing and improving user experience.
 
  User Experience
-
 Hypothesis: Measure user satisfaction and the time taken to create accounts and book products.
 Data Collected:  
    Account creation time for 5 users: 45 seconds per user (Expected: ≤ 30 seconds)
