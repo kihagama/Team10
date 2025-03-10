@@ -52,3 +52,16 @@ Goal-Increase Sales and Customer Retention
      metrics-Number of orders per day
   Question-How many users return to book again?
  Metrics-number of customers with more than 2 oders but on different days
+
+
+User Engagement Metrics
+
+  Login Count per User:
+    What It Tracks: Each time a user logs in, the function trackUserLogin($userId) logs the event into a user_activity table (with an activity type of 'login').
+    How It's Reported: The function getUserEngagementReport() aggregates these login entries to show the total number of logins per user.
+
+Booking System Metrics
+
+  Booking Status Distribution:
+    What It Tracks: Every booking made is recorded using the function trackBooking($userId, $productId, $status), which logs the booking with its current status (e.g., 'pending', 'confirmed', or 'cancelled').
+    How It's Reported: The function getBookingMetrics() groups and counts the booking records by their status, providing a breakdown of how many bookings are pending, confirmed, or cancelled.
