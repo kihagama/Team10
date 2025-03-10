@@ -131,7 +131,7 @@ Business Performance
 Hypothesis: Increase orders and customer retention.
 Data Collected:  
   Average number of orders per day: 20 (Expected: ≥ 50 orders/day)
-  Number of new user registrations: 30 per month (Expected: ≥ 100 new registrations/month)
+  Number of new user registrations: 30 per week (Expected: ≥ 100 new registrations/month)
   Retention rate: 60% (Expected: ≥ 80%)
 Analysis:  
  Orders per day and user registrations are below target. The business strategy may need to focus more on marketing and improving user experience.
