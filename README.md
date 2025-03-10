@@ -97,7 +97,7 @@ Admin's perspective
   Question-How efficient is order confirmation?  
     metrics-Time to confirm orders (seconds)
 
-Customer's perspective
+Customer's perspective 
  Goal-Improve customer Experience
    Question-how easy is it to create and account
      Metric-Account creation time (seconds)
@@ -123,5 +123,5 @@ User Engagement Metrics
 Booking System Metrics
 
   Booking Status Distribution:
-    What It Tracks: Every booking made is recorded using the function trackBooking($userId, $productId, $status), which logs the booking with its current status (e.g., 'pending', 'confirmed', or 'cancelled').
+    What It Tracks: Every booking made is recorded using the function trackBooking($userId, $productId, $status), which logs the booking with its current status (e.g. 'confirmed', or 'cancelled').
     How It's Reported: The function getBookingMetrics() groups and counts the booking records by their status, providing a breakdown of how many bookings are pending, confirmed, or cancelled.
