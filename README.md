@@ -125,7 +125,9 @@ Booking System Metrics
   Booking Status Distribution:
     What It Tracks: Every booking made is recorded using the function trackBooking($userId, $productId, $status), which logs the booking with its current status (e.g. 'confirmed', or 'cancelled').
     How It's Reported: The function getBookingMetrics() groups and counts the booking records by their status, providing a breakdown of how many bookings are pending, confirmed, or cancelled.
+    
 Business Performance
+
 Hypothesis: Increase orders and customer retention.
 Data Collected:  
   Average number of orders per day: 20 (Expected: ≥ 50 orders/day)
@@ -133,4 +135,14 @@ Data Collected:
   Retention rate: 60% (Expected: ≥ 80%)
 Analysis:  
  Orders per day and user registrations are below target. The business strategy may need to focus more on marketing and improving user experience.
+
+ User Experience
+
+Hypothesis: Measure user satisfaction and the time taken to create accounts and book products.
+Data Collected:  
+   Account creation time for 5 users: 45 seconds per user (Expected: ≤ 30 seconds)
+   Booking time for 5 users: 60 seconds per booking (Expected: ≤ 30 seconds)
+   Average user satisfaction score: 4.2/5 (Expected: ≥ 4.5)
+Analysis:  
+  While users are satisfied, the system can improve speed and user onboarding experience.
 
