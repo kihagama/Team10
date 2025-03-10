@@ -99,7 +99,7 @@ Admin's perspective
 
 Customer's perspective 
  Goal-Improve customer Experience
-   Question-how easy is it to create an account
+   Question-how easy is it for a user to create an account
      Metric-Account creation time (seconds)
   Question-Are users satisfied with the booking process?  
      metrics-User satisfaction score (1-5) 
@@ -136,7 +136,7 @@ Analysis:
  Orders per day and user registrations are below target. The business strategy may need to focus more on marketing and improving user experience.
 
  User Experience
-Hypothesis: Measure user satisfaction and the time taken to create accounts and book products.
+Hypothesis: Measure user satisfaction and the time taken to create accounts and book farm products.
 Data Collected:  
    Account creation time for 5 users: 45 seconds per user (Expected: ≤ 30 seconds)
    Booking time for 5 users: 60 seconds per booking (Expected: ≤ 30 seconds)
