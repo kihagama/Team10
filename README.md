@@ -99,7 +99,7 @@ Admin's perspective
 
 Customer's perspective 
  Goal-Improve customer Experience
-   Question-how easy is it to create and account
+   Question-how easy is it to create an account
      Metric-Account creation time (seconds)
   Question-Are users satisfied with the booking process?  
      metrics-User satisfaction score (1-5) 
@@ -123,7 +123,7 @@ User Engagement Metrics
 Booking System Metrics
 
   Booking Status Distribution:
-    What It Tracks: Every booking made is recorded using the function trackBooking($userId, $productId, $status), which logs the booking with its current status (e.g. 'confirmed', or 'cancelled').
+    What It Tracks: Every booking made is recorded using the function trackBooking($userId, $productId, $status), which logs the booking with its current status (for example. 'confirmed', or 'cancelled').
     How It's Reported: The function getBookingMetrics() groups and counts the booking records by their status, providing a breakdown of how many bookings are pending, confirmed, or cancelled.
     
 Business Performance
