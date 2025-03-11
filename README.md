@@ -172,10 +172,8 @@ Weights Assignment:
  UI: 1 (low complexity)
  ILF: 3 (average complexity)
  EIF: 0 (none)
-
 Total Functional Points Calculation:
 FP = (5 * 5) + (3 * 5) + (1 * 4) + (3 * 10) + (0 * 0) = 25 + 15 + 4 + 30 + 0 = 74
-
 Total Functional Points = 74
 
 
