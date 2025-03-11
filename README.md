@@ -143,4 +143,41 @@ Data Collected:
    Average user satisfaction score: 4.2/5 (Expected: ≥ 4.5)
 Analysis:  
   While users are satisfied, the system can improve speed and user onboarding experience.
+## Measuring Internal Product Attributes.
+ Functional Points.
+Components Identified:
+ External Inputs (EI):
+   Login form (1)
+   Registration form (1)
+   Product edit form (1)
+   User actions (add/delete) (2)
+  Total EI = 5
+
+ External Outputs (EO):
+Product list display (1)
+   User dashboard (1)
+   Admin panel (1)
+  Total EO = 3
+Internal Logical Files (ILF):
+   Users table (1)
+   Products table (1)
+   Bookings table (1)
+  Total ILF = 3
+External Interface Files (EIF):
+   None identified in the provided snippets.
+  Total EIF = 0
+Weights Assignment:
+ EI: 5 (average complexity)
+ EO: 3 (average complexity)
+ UI: 1 (low complexity)
+ ILF: 3 (average complexity)
+ EIF: 0 (none)
+
+Total Functional Points Calculation:
+FP = (5 * 5) + (3 * 5) + (1 * 4) + (3 * 10) + (0 * 0) = 25 + 15 + 4 + 30 + 0 = 74
+
+Total Functional Points = 74
+
+
+  
 
