@@ -177,5 +177,45 @@ FP = (5 * 5) + (3 * 5) + (1 * 4) + (3 * 10) + (0 * 0) = 25 + 15 + 4 + 30 + 0 = 7
 Total Functional Points = 74
 
 
+
+Cyclomatic Complexity ,cc
+calculated using the formula:
+CC = E - N + 2 * P
+
+Where:
+E = Number of edges (transitions between decision points)
+N = Number of nodes (decision points or blocks)
+P = Number of connected components (typically 1)
+Cyclomatic Complexity Calculation per File:
+
+index.php: Cyclomatic Complexity (CC) = 3
+The logic involves decision points to check if the user is logged in and to show a custom alert, both of which create branching in the control flow.
+
+product_edit.php: Cyclomatic Complexity (CC) = 3
+There is a decision point to check if the product exists. This condition leads to a branch in the flow, increasing the complexity.
+
+producthandle.php: Cyclomatic Complexity (CC) = 3
+The decision points check for user login, if the user exists, and fetch bookings. These multiple checks and conditions add to the complexity.
+
+productupdate.php: Cyclomatic Complexity (CC) = 3
+The script checks the POST request method, if an image is uploaded, if the upload directory exists, and if the old image exists. These checks introduce multiple paths.
+
+user_actions.php: Cyclomatic Complexity (CC) = 3
+The conditions check the action type and whether the admin is trying to delete their own account. Each condition adds branches, contributing to the complexity.
+
+userdashboard.php: Cyclomatic Complexity (CC) = 3
+The flow checks if bookings exist and if the modal is opened. These conditions introduce two decision points, resulting in moderate complexity.
+
+admin.php: Cyclomatic Complexity (CC) = 3
+The logic includes checking if the user is logged in and if the action is valid. These checks cause the flow to diverge, contributing to the complexity.
+
+admin_actions.php: Cyclomatic Complexity (CC) = 3
+The script checks if the action is valid, introducing a decision point and branching the flow, which results in a moderate complexity.
+
+Total Cyclomatic Complexity of the Application:
+Total Cyclomatic Complexity = 3 * 8 = 24
+
+Thus, the total Cyclomatic Complexity of the application is 24.
+
   
 
