@@ -221,5 +221,7 @@ Cohesion Measurement.
 Analysis:The modules in the software have a moderate cohesion level, as most functions in a given module serve a single purpose e.g., either handling user input, processing product data, processing  user data, handling booking data. However, some scripts mix multiple responsibilities , slightly reducing cohesion.
 Score: Moderate (Functional Cohesion).
 
-  
+Data Structure Complexity Measurement:
+Analysis: The software mainly relies on simple arrays,integers,strings and associative arrays for data handling. No highly complex structures like trees,stacks, graphs are used.
+Score: Low
 
