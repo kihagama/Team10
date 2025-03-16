@@ -217,5 +217,9 @@ Total Cyclomatic Complexity = 3 * 8 = 24
 
 Thus, the total Cyclomatic Complexity of the application is 24.
 
+Cohesion Measurement.
+Analysis:The modules in the software have a moderate cohesion level, as most functions in a given module serve a single purpose e.g., either handling user input, processing product data, processing  user data, handling booking data. However, some scripts mix multiple responsibilities , slightly reducing cohesion.
+Score: Moderate (Functional Cohesion).
+
   
 
