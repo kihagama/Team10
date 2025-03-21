@@ -225,3 +225,16 @@ Data Structure Complexity Measurement:
 Analysis: The software mainly relies on simple arrays,integers,strings and associative arrays for data handling. No highly complex structures like trees,stacks, graphs are used.
 Score: Low
 
+Depth of Nesting
+Definition:
+This metric evaluates how deeply nested the control structures are (loops, if-else).  
+
+Implementation in NanaAgricFarm:  
+ The booking confirmation process involves multiple nested checks, such as:  
+  php
+  if ($status == 'pending') {
+      if ($user_role == 'admin') {
+          // Admin actions
+      }
+  }
+Reducing nesting depth improves readability and reduces error-prone code sections, making it easier for developers to maintain and update the code.
