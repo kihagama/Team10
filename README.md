@@ -238,3 +238,19 @@ Implementation in NanaAgricFarm:
       }
   }
 Reducing nesting depth improves readability and reduces error-prone code sections, making it easier for developers to maintain and update the code.
+
+
+
+
+##Information Flow Complexity
+
+  Definition:
+    This measures how data moves between different modules and functions.  
+
+  Implementation in NanaAgricFarm: 
+     The system logs user actions (logins, bookings) and connects these to the product and user tables.  
+       Fan-in: 
+         The users table is referenced by the booking table, contributing to higher fan-in, which indicates the number of modules that can affect a particular module.  
+       Fan-out: 
+         The products table influences multiple operations, including bookings, availability checks, and order tracking, demonstrating how changes in one module can impact others.
+
