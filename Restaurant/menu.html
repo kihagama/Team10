@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Daily choice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Daily choice</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="offer.html">Offers</a></li>
+                <li><a href="staff.html">Our Staff</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Menu Hero Section -->
+    <section class="menu-hero">
+        <h1>Our Delicious <span>Menu</span></h1>
+        <p>Explore our wide variety of mouth-watering dishes</p>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="menu-categories">
+        <div class="category-filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="local">Local Dishes</button>
+            <button class="filter-btn" data-category="fast-food">Fast Food</button>
+            <button class="filter-btn" data-category="snacks">Snacks</button>
+            <button class="filter-btn" data-category="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-grid">
+            <!-- Local Dishes -->
+            <div class="menu-item" id="matooke" data-category="local">
+                <img src="matooke.jpg" alt="Matooke">
+                <div class="menu-item-content">
+                    <h3>Matooke Katogo</h3>
+                    <p>Steamed green bananas served with groundnut sauce and fresh vegetables</p>
+                    <div class="menu-item-footer">
+                        <span class="price">UGX 15,000</span>
+                        <button onclick="OrderNow()" class="add-to-cart">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="local">
+                <img src="luwombo.jpeg" alt="Luwombo">
+                <div class="menu-item-content">
+                    <h3>Luwombo</h3>
+                    <p>Traditional steamed meat or chicken in banana leaves with groundnut sauce</p>
+                    <div class="menu-item-footer">
+                        <span class="price">UGX 18,000</span>
+                        <button onclick="OrderNow()" class="add-to-cart">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fast Food -->
+            <div class="menu-item" id="rolex" data-category="fast-food">
+                <img src="rolex.webp" alt="Rolex">
+                <div class="menu-item-content">
+                    <h3>Rolex</h3>
+                    <p>Ugandan-style egg and vegetable wrap with chapati</p>
+                    <div class="menu-item-footer">
+                        <span class="price">UGX 5,000</span>
+                        <button onclick="OrderNow()" class="add-to-cart">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="fast-food">
+                <img src="chapatti.jpg" alt="Chapati">
+                <div class="menu-item-content">
+                    <h3>Chapati</h3>
+                    <p>Freshly made flatbread served with beans or vegetables</p>
+                    <div class="menu-item-footer">
+                        <span class="price">UGX 3,000</span>
+                        <button onclick="OrderNow()" class="add-to-cart">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Snacks -->
+            <div class="menu-item" data-category="snacks">
+                <img src="samosa.jpg" alt="Samosa">
+                <div class="menu-item-content">
+                    <h3>Samosa</h3>
+                    <p>Crispy pastry filled with spiced meat or vegetables</p>
+                    <div class="menu-item-footer">
+                        <span class="price">UGX 2,000</span>
+                        <button onclick="OrderNow()" class="add-to-cart">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="snacks">
+                <img src="mandazi.jpg" alt="Mandazi">
+                <div class="menu-item-content">
+                    <h3>Mandazi</h3>
+                    <p>Sweet fried dough served with tea or coffee</p>
+                    <div class="menu-item-footer">
+                        <span class="price">UGX 1,500</span>
+                        <button onclick="OrderNow()" class="add-to-cart">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drinks -->
+            <div class="menu-item" id="juice" data-category="drinks">
+                <img src="fresh-juice.webp" alt="Fresh Juice">
+                <div class="menu-item-content">
+                    <h3>Fresh Juice</h3>
+                    <p>Natural fruit juice (passion fruit, mango, or pineapple)</p>
+                    <div class="menu-item-footer">
+                        <span class="price">UGX 4,000</span>
+                        <button onclick="OrderNow()" class="add-to-cart">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="drinks">
+                <img src="water.avif" alt="Water">
+                <div class="menu-item-content">
+                    <h3>Water</h3>
+                    <p>Natural fruit juice (passion fruit, mango, or pineapple)</p>
+                    <div class="menu-item-footer">
+                        <span class="price">UGX 1,000</span>
+                        <button onclick="OrderNow()" class="add-to-cart">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="drinks">
+                <img src="soda.jpg" alt="Soda">
+                <div class="menu-item-content">
+                    <h3>Soda</h3>
+                    <p>Natural fruit juice (passion fruit, mango, or pineapple)</p>
+                    <div class="menu-item-footer">
+                        <span class="price">UGX 5,000</span>
+                        <button onclick="OrderNow()" class="add-to-cart">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="drinks">
+                <img src="warago.jpeg" alt="Waragi">
+                <div class="menu-item-content">
+                    <h3>Waragi</h3>
+                    <p>Traditional Ugandan gin with ginger or passion fruit</p>
+                    <div class="menu-item-footer">
+                        <span class="price">UGX 8,000</span>
+                        <button onclick="OrderNow()" class="add-to-cart">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Daily choice</h3>
+                <p>Your favorite fast food delivery service, bringing delicious meals right to your doorstep. We pride ourselves on quality, speed, and customer satisfaction.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="staff.html">Our Staff</a></li>
+                    <li><a href="services.html">Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Phone: +256703713737</li>
+                    <li>Email: info@dailychoice.com</li>
+                    <li>Address: main street, Mbarara city</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Daily choice. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    function OrderNow() {
+        if (confirm("Do you want to place this order?")) {
+            alert("Your order has been Order Placed Successfully!");
+            } else {alert("Your order has been cancelled");
+            return;
+            }
+        }
+</script>
+</html> 

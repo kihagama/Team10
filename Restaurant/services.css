@@ -1,0 +1,228 @@
+/* Services Hero Section */
+.services-hero {
+    background: linear-gradient(135deg, #fffbf7 0%, #fff5f5 100%);
+    padding: 150px 5% 60px;
+    text-align: center;
+}
+
+.services-hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.services-hero h1 span {
+    color: #ff4d4d;
+}
+
+.services-hero p {
+    font-size: clamp(16px, 2vw, 18px);
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Main Services */
+.main-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 80px 5%;
+    background-color: #fff;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+}
+
+.service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.service-card h3 {
+    color: #ff4d4d;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.service-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.service-features {
+    list-style: none;
+    text-align: left;
+}
+
+.service-features li {
+    color: #666;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.service-features li::before {
+    content: "✓";
+    color: #ff4d4d;
+    position: absolute;
+    left: 0;
+}
+
+/* How It Works */
+.how-it-works {
+    padding: 80px 5%;
+    background: #fffbf7;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: clamp(28px, 4vw, 36px);
+    margin-bottom: 50px;
+}
+
+.how-it-works h2 span {
+    color: #ff4d4d;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step {
+    position: relative;
+    padding: 20px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: #ff4d4d;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.step h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.step p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Service Areas */
+.service-areas {
+    padding: 80px 5%;
+    background: #fff;
+    text-align: center;
+}
+
+.service-areas h2 {
+    font-size: clamp(28px, 4vw, 36px);
+    margin-bottom: 50px;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.area {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.area h3 {
+    color: #ff4d4d;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.area ul {
+    list-style: none;
+    text-align: left;
+}
+
+.area ul li {
+    color: #666;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.area ul li::before {
+    content: "•";
+    color: #ff4d4d;
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-hero {
+        padding: 120px 20px 40px;
+    }
+
+    .main-services {
+        padding: 40px 20px;
+    }
+
+    .steps-container {
+        gap: 20px;
+    }
+
+    .step {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .step-number {
+        width: 35px;
+        height: 35px;
+    }
+} 

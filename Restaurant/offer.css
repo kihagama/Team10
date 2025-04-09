@@ -1,0 +1,64 @@
+/* Offers Section */
+.offers {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: #fff; /* Added background for better contrast */
+}
+
+.offers h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ff4d4d; /* Consistent color with the brand */
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Center align items */
+    gap: 20px; /* Space between cards */
+}
+
+.offers p {
+    font-size: clamp(16px, 2vw, 18px);
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.offer-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px; /* Increased padding for better spacing */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
+    transition: transform 0.3s ease; /* Added hover effect */
+}
+
+.offer-card:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.offer-card h3 {
+    color: #ff4d4d;
+    margin-bottom: 10px;
+    font-size: 1.5rem; /* Increased font size for emphasis */
+}
+
+.offer-card p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .offers {
+        margin-top: 100px;
+        padding: 40px 20px;
+    }
+
+    .offer-card {
+        margin: 15px auto;
+    }
+}

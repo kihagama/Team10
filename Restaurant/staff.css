@@ -1,0 +1,70 @@
+/* Staff Section */
+.staff {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: #fff; /* Added background for better contrast */
+}
+
+.staff h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ff8787; /* Consistent color with the brand */
+}
+
+.staff p {
+    font-size: clamp(16px, 2vw, 18px);
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* Flexbox Layout for Staff Members */
+.staff-members-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Center align items */
+    gap: 20px; /* Space between cards */
+}
+
+.staff-member {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px; /* Increased padding for better spacing */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Added hover effect */
+    width: 100%; /* Full width for better responsiveness */
+    max-width: 400px; /* Limit max width */
+}
+
+.staff-member:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.staff-member h3 {
+    color: #ff4d4d;
+    margin-bottom: 10px;
+    font-size: 1.5rem; /* Increased font size for emphasis */
+}
+
+.staff-member p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .staff {
+        margin-top: 100px;
+        padding: 40px 20px;
+    }
+
+    .staff-members-container {
+        flex-direction: column; /* Stack in a single column on small screens */
+    }
+
+    .staff-member {
+        margin: 15px auto;
+    }
+}
