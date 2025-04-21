@@ -99,6 +99,11 @@ INSERT INTO `users` (`id`, `username`, `email`, `phone`, `district`, `password`,
 --
 -- Indexes for dumped tables
 --
+--A failures table to store failure times:
+CREATE TABLE failures (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    failure_time INT NOT NULL
+);
 
 --
 -- Indexes for table `booking`
