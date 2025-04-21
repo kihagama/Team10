@@ -215,9 +215,45 @@ include 'connect.php';
         }
 
     </script>
+
+<?php
+// -------- Simulated Failures Data --------
+$failure_times = [10, 19, 32, 43, 58, 70, 88, 103, 125, 150];
+$intervals = [];
+for ($i = 1; $i < count($failure_times); $i++) {
+    $intervals[] = $failure_times[$i] - $failure_times[$i - 1];
+}
+
+// -------- Metrics Calculation --------
+$total_time = end($failure_times) - $failure_times[0];
+$total_failures = count($failure_times);
+$sum_intervals = array_sum($intervals);
+$mttf = $total_failures > 0 ? $sum_intervals / count($intervals) : 0;
+$mttr = 10;
+$mtbf = $mttf + $mttr;
+$availability = ($mttf + $mttr) > 0 ? $mttf / ($mttf + $mttr) : 0;
+$lambda = $mttf > 0 ? 1 / $mttf : 0;
+$t = 100;
+$reliability = exp(-$lambda * $t);
+?>
+
+<!-- Software Reliability Panel -->
+<div style="border: 1px solid #ccc; padding: 20px; margin: 40px; background: #f1f1f1; border-radius: 8px;">
+    <h2>📊 Software Reliability Metrics (Demo)</h2>
+    <ul style="line-height: 1.6;">
+        <li><strong>Number of Failures:</strong> <?= $total_failures ?></li>
+        <li><strong>Total Runtime:</strong> <?= $total_time ?> minutes</li>
+        <li><strong>Mean Time to Failure (MTTF):</strong> <?= round($mttf, 2) ?> minutes</li>
+        <li><strong>Mean Time Between Failures (MTBF):</strong> <?= round($mtbf, 2) ?> minutes</li>
+        <li><strong>Availability:</strong> <?= round($availability * 100, 2) ?>%</li>
+        <li><strong>Reliability R(t = 100 min):</strong> <?= round($reliability, 4) ?></li>
+    </ul>
+    <p style="font-size: 0.9em; color: #555;">
+        * This section simulates software reliability calculations based on lecture concepts (SENG421).
+    </p>
+</div>
+
 </body>
-
-
 </html>
 
 <?php mysqli_close($conn); ?>
