@@ -446,6 +446,13 @@ Reliability at t = 100 minutes: 0.5487
 ##Object oriented metrics
 
 WMC (Weighted Methods per Class)	Measures class complexity by counting the number of methods. Lower is better for simplicity and maintainability.	Each major controller (ProductController.php, UserController.php, OrderController.php) was designed with a low number of methods (~3–5 per class). We applied the Single Responsibility Principle (SRP) by ensuring that every method handled a very specific action (e.g., addProduct(), deleteProduct()). This resulted in simpler, cleaner, and easily testable classes.
+
 DIT (Depth of Inheritance Tree)	Measures how deep the inheritance hierarchy is. Shallow trees are easier to manage.	Inheritance was kept shallow: for example, BaseController defines generic controller behavior, and all feature-specific controllers (ProductController, UserController) inherit from it directly. No deep subclassing (DIT of 1–2), making the project easy to navigate and extend.
+
 NOC (Number of Children)	Number of immediate subclasses inheriting from a class. Higher NOC shows more reuse but may increase complexity.	BaseController and BaseModel classes serve as common parents. Different modules (Products, Users, Orders) inherit standard functionality like request handling and database interaction, promoting code reuse and consistent structure. By centralizing common behaviors, we made adding new modules faster and safer.
 
+CBO (Coupling Between Objects)	Measures how much classes are dependent on each other. Lower coupling leads to more flexible systems.	Loose coupling was achieved through a clear MVC separation: Controllers interact only with their respective Models and Views via well-defined interfaces. For example, ProductController communicates only with ProductModel and its Views — never reaching into UserModel or others. This architecture minimizes side effects and eases testing.
+
+RFC (Response For a Class)	Counts the number of possible methods that can be triggered from a class. Fewer responses simplify understanding and testing.	Each controller exposes only essential public methods needed by the views. Example: UserController provides registerUser(), loginUser(), and logoutUser() — avoiding unnecessary extra endpoints. This keeps RFC low (~4–5 methods), reducing system complexity and improving reliability.
+
+LCOM (Lack of Cohesion of Methods)	Measures the degree to which methods in a class are related to each other. High cohesion (low LCOM) is preferred.	Every class in Nanafarm was focused on a single domain concept. ProductController handles only product-related operations; UserModel handles user database records only. We avoided mixing responsibilities, ensuring high cohesion, better readability, and easier future refactoring.
