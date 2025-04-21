@@ -256,4 +256,156 @@ Reducing nesting depth improves readability and reduces error-prone code section
          The users table is referenced by the booking table, contributing to higher fan-in, which indicates the number of modules that can affect a particular module.  
        Fan-out: 
          The products table influences multiple operations, including bookings, availability checks, and order tracking, demonstrating how changes in one module can impact others.
+## Measuring External Product Attributes.
+software Quality Measurement Based on ISO 9126 quality model
+1. Functionality (Score: 4.2/5)
+a) Suitability
+Implemented Features:
+User authentication system with session management
+ Product management system
+ Booking system with status tracking
+ Admin dashboard with user,booking and product management
+ Responsive design with mobile support
+
+ Code Evidence:
+sessions initiated and validated in login.php and dashboard pages
+booking stored and status tracked via submit_booking.php
+
+b) Accuracy
+Strengths:
+ Use of prepared statements for database operations for secure queries and some input sanitization through the mysqli_real_escape_string() 
+ Input validation for booking submissions 
+ Proper session handling 
+
+Areas for Improvement:
+ Expand input sanitization (e.g., htmlspecialchars, filter_var)
+ Introduce comprehensive error logging via error_log()
+-Validate all form inputs with fallback UI messages
+
+2. Reliability (Score: 3.5/5)
+a) Maturity
+Implemented:
+ Database connection error handling
+Session lifecycle management
+Basic form validation
+
+Missing:
+ Full-stack error catching (try-catch in PHP)
+ Logging unexpected failures in a log file
+
+b) Fault Tolerance
+Implemented:
+ Database connectivity checks
+ Session verification before access
+
+ Missing:
+ Graceful failure UI such as  custom 500 or 404 pages
+ Recovery from partial booking submission failures
+ Logging intrusion attempts or data anomalies
+
+3. Usability (Score: 4.0/5)
+a) Understandability
+Features implemented:
+ Logical navigation with clear menus
+ Semantic HTML for better comprehension
+ Consistent button styles
+
+b) Learnability
+Implemented:
+Clear forms with labels and placeholders
+ Step-by-step product interaction
+
+c) Operability
+implemented:
+ Modal dialogs for forms
+ Visual cues for actions such as  button hover effects
+ Mobile navigation menu
+
+4. Efficiency (Score: 3.0/5)
+
+a) Time Behavior
+ issues to be addressed:
+ Compress images used in banners and listings
+ Enable browser caching  via .htaccess rules
+ Bundle CSS into fewer files
+
+b) Resource Behavior
+Issues to be addressed:
+ No asset minification
+ No lazy loading (especially for images)
+ Use CDN for external fonts and libraries
+
+5. Maintainability (Score: 3.5/5)
+a) Analyzability
+Positive Aspects:
+ Code separation in PHP, CSS, JS files
+  moderate Modular design in  some files  such as header and footer for resuability
+Functional naming conventions such as  connect.php, producthandle.php ,admin.php
+
+issues to be addressed:
+Split large files like product.php into reusable includes
+Document complex logic with comments
+Add developer onboarding instructions
+
+b) Testability
+Missing Component to be implemented:
+ Write unit tests using PHPUnit or a custom test script
+ Add automated browser tests e.g., Selenium, Cypress
+ Create `test/` folder with mock data and test cases
+
+6. Portability (Score: 4.0/5)
+a) Adaptability
+ implemented:
+ CSS media queries for responsiveness
+ Font loading support for various devices
+
+b) Installability
+ implemented:
+ Database dump provided
+ Code works on WAMP/XAMPP with PHP/MySQL
+ No OS-specific dependencies
+ And operational procedures well documented in the Readme file
+
+7. Quality-in-Use (Score: 3.0/5)
+ Needs Attention:
+ No user feedback form or satisfaction poll in the website
+ No analytics integration e.g Google Analytics  for  collecting data about the software usage 
+ No way to collect performance metrics from real users
+
+Recommendations for Improvement
+Security Enhancements:
+ Validate and sanitize every GET and POST parameter
+ Add CSRF tokens to forms
+
+ Performance Optimization:
+ Compress images and scripts
+ Implement HTTP caching and defer non-critical JS
+ And track the improvement results through the chrome lighthouse 
+
+Error Handling:
+ Introduce try-catch blocks around all DB calls
+ Log errors to a file with timestamps
+
+Input Validation:
+ Use HTML5 validation and server-side checks together
+
+Final Quality Scores Summary:
+-----------------------------------------
+| Quality Attribute   | Score | Status  |
+|---------------------|-------|---------|
+| Functionality       | 4.2/5 | Good    |
+| Reliability         | 3.5/5 | Average |
+| Usability           | 4.0/5 | Good    |
+| Efficiency          | 3.0/5 | Average |
+| Maintainability     | 3.5/5 | Average |
+| Portability         | 4.0/5 | Good    |
+| Quality-in-Use      | 3.0/5 | Average |
+-----------------------------------------
+
+Overall Quality Score: 3.6 / 5.0
+Based on the evaluation using the ISO 9126 quality model, the software has average quality, with strengths in functionality and usability, and improvement areas in efficiency,testability and error handling.
+
+
+
+
 
