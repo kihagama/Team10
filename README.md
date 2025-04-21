@@ -1,4 +1,4 @@
-Prerequisites
+I'llPrerequisites
 step 1:
 Install XAMPP or WAMP : Ensure you have a local server environment like XAMPP or WAMP installed on your machine.
 Start Apache and MySQL : Open the XAMPP/WAMP control panel and start Apache and MySQL.
@@ -443,6 +443,9 @@ Reliability at t = 100 minutes: 0.5487
 
 
 
+##Object oriented metrics
 
-
+WMC (Weighted Methods per Class)	Measures class complexity by counting the number of methods. Lower is better for simplicity and maintainability.	Each major controller (ProductController.php, UserController.php, OrderController.php) was designed with a low number of methods (~3–5 per class). We applied the Single Responsibility Principle (SRP) by ensuring that every method handled a very specific action (e.g., addProduct(), deleteProduct()). This resulted in simpler, cleaner, and easily testable classes.
+DIT (Depth of Inheritance Tree)	Measures how deep the inheritance hierarchy is. Shallow trees are easier to manage.	Inheritance was kept shallow: for example, BaseController defines generic controller behavior, and all feature-specific controllers (ProductController, UserController) inherit from it directly. No deep subclassing (DIT of 1–2), making the project easy to navigate and extend.
+NOC (Number of Children)	Number of immediate subclasses inheriting from a class. Higher NOC shows more reuse but may increase complexity.	BaseController and BaseModel classes serve as common parents. Different modules (Products, Users, Orders) inherit standard functionality like request handling and database interaction, promoting code reuse and consistent structure. By centralizing common behaviors, we made adding new modules faster and safer.
 
