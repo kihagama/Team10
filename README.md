@@ -406,6 +406,43 @@ Overall Quality Score: 3.6 / 5.0
 Based on the evaluation using the ISO 9126 quality model, the software has average quality, with strengths in functionality and usability, and improvement areas in efficiency,testability and error handling.
 
 
+## Software Reliability Metrics Update
+This update introduces software reliability metrics to the system, which provide insights into the performance and reliability of the software. The following metrics are now integrated and available on the Admin Dashboard:
+Mean Time to Failure (MTTF)
+Mean Time Between Failures (MTBF)
+Availability
+Reliability at a given time (R(t = 100 minutes))
+These metrics are essential for tracking the system's reliability and understanding its failure behavior over time. They align with the concepts discussed in the lecture 9.
+
+-Metrics Calculations
+--Mean Time to Failure (MTTF):
+MTTF is calculated as the average time between system failures. It is an important metric for understanding the system's stability and durability.
+--Mean Time Between Failures (MTBF):
+MTBF is the total operating time between system failures, combining MTTF with the Mean Time to Repair (MTTR). It gives an idea of how often the system fails during its operation.
+--Availability:
+Availability is a ratio of operational time to the total time (MTTF / (MTTF + MTTR)). A higher availability indicates a more reliable system.
+--Reliability (R(t)):
+Reliability is calculated at a given time (e.g., t = 100 minutes), based on the failure rate derived from MTTF. This shows the probability of the system functioning without failure at a specific point in time.
+
+##Implementation Details:
+The failure times data is either simulated or fetched dynamically from the system's failure logs.
+The metrics are calculated in the backend PHP script and displayed on the Admin Dashboard.
+The reliability metrics are displayed in a styled panel on the Admin Dashboard. The calculated metrics include the number of failures, total runtime, MTTF, MTBF, availability, and reliability at t = 100 minutes.
+  - Log in as an admin and navigate to the Software Reliability Metrics section of the Admin Dashboard.
+The metrics will be displayed automatically after the system fetches failure data (either simulated or from the database).
+Failure times are stored in the failures table.
+
+-When you visit the Software Reliability Metrics section in the Admin Dashboard, you’ll see a table displaying the following information:
+Number of Failures: 10
+Total Runtime: 140 minutes
+MTTF: 15.23 minutes
+MTBF: 25.23 minutes
+Availability: 60.25%
+Reliability at t = 100 minutes: 0.5487
+
+
+
+
 
 
 
