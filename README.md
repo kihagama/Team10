@@ -213,9 +213,9 @@ admin_actions.php: Cyclomatic Complexity (CC) = 3
 The script checks if the action is valid, introducing a decision point and branching the flow, which results in a moderate complexity.
 
 Total Cyclomatic Complexity of the Application:
-Total Cyclomatic Complexity = 3 * 8 = 24
+Total Cyclomatic Complexity = 5.5 * 8 = 44
 
-Thus, the total Cyclomatic Complexity of the application is 24.
+Thus, the total Cyclomatic Complexity of the application is 44.
 
 Cohesion Measurement.
 Analysis:The modules in the software have a moderate cohesion level, as most functions in a given module serve a single purpose e.g., either handling user input, processing product data, processing  user data, handling booking data. However, some scripts mix multiple responsibilities , slightly reducing cohesion.
