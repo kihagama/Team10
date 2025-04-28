@@ -440,7 +440,143 @@ MTBF: 25.23 minutes
 Availability: 60.25%
 Reliability at t = 100 minutes: 0.5487
 
+##Software Test Metrics 
 
+Unit testing: Each function in our system (e.g., adding to cart, updating stock, calculating totals) needed to be independently tested to ensure it worked correctly in isolation.
+
+✔ How we implemented Unit Testing: We identified small units of functionality, such as: Add to Cart function, Checkout function
+
+For each function, we carried out individual tests to verify that: The correct product is added to the cart, The cart total is calculated correctly, The stock reduces appropriately after an order. Example: Input: Add 3 tomatoes to cart. Expected output: Cart shows "Tomatoes: 3 items."
+
+Different modules (Login, Product Catalog, Cart, Payment, Inventory) needed to work correctly together as a complete flow.
+
+✔ How we implemented Integration Testing: We designed test cases that combined modules.
+
+We focused on testing data flow between components, such as:
+
+After login, the user can view products.
+
+After selecting products, they can checkout.
+
+After payment, the inventory updates.
+
+We used manual testing by simulating real user flows step-by-step and verifying database updates.
+
+✔ Example: Login → Select "Fresh Maize" → Add to cart → Checkout → Payment successful → Inventory reduced.
+
+According to our lecture material:
+
+We calculate the number of test cases based on two factors:
+
+Time available
+
+Cost available
+
+We use these formulas:
+
+ From Time: 𝑁time=(available time (hours)×available staff)/(average time to prepare a test case (hours))
+
+ From Cost: 𝑁cost=available budget/average preparation cost per test case​Then finally:
+
+ Select the minimum: 𝑁=min(𝑁time,𝑁cost)
+
+Applying the Formulas to Our Project We assumed these values based on our project conditions:
+Total budget: $3,000
+
+10% of the project budget was allocated for test case preparation.
+
+Average preparation cost per test case: $30 Project duration: 5 weeks Each week: 40 hours Testing team size: 3 group members
+
+Average time to prepare one test case: 2 hours
+
+Step 1: Estimate by Cost First, calculate the amount available for testing:
+
+Available Budget for Testing=0.1×3000=300 dollars
+
+Now calculate number of test cases based on cost: 𝑁cost=300/30=10 test cases
+
+Step 2: Estimate by Time First, calculate the total available testing time:
+
+Total Time= 5 weeks×40 hours/week × 3 staff=600 hours Now calculate number of test cases based on time:
+
+𝑁time=600/2=300 test cases Step 3: Take the Minimum Now:
+
+𝑁=min(10,300)=10 test cases
+
+Decisions Based on Testing 
+
+We used test results to guide critical project decisions:
+a) Release Readiness Metric: Test Pass Rate (>95% required for release).
+
+Calculation: Rpass =(Passed Test Cases)/(Total Test Cases)x100=92/100 Decision: Delayed release by 3 days to fix 8 failed cases (e.g., payment gateway timeout).
+
+b) Risk Mitigation Payment Module Failure Rate: 15% of test cases failed initially.
+
+Action: Replaced the third-party payment API with a more stable provider.
+
+c) Resource Allocation 40% of defects were in the Shopping Cart.
+
+Decision: Assigned 2 additional developers to refactor the cart logic.
+
+Test Coverage Measurement 
+
+We tracked coverage using code instrumentation tools (JaCoCo) and requirements traceability:
+a) Statement Coverage CVs = (St/Sp)x100 = (4200/5000)x100=84%
+
+Goal: 90%.
+
+Gap Analysis: Untested code was in edge cases (e.g., coupon expiration logic).
+
+b) Branch Coverage CVb = (Nbt/Nb)x100=(110)/(150)x100=73.3% Improvement: Added test cases for user role transitions (e.g., guest → logged-in user).
+
+c) GUI Coverage Metric: 78% of UI elements tested (e.g., buttons, forms).
+
+Tool: Selenium scripts for repetitive UI validations.
+
+Software Testability 
+
+Measurement We evaluated testability using controllability metrics:
+a) Test Controllability of Components For the Order Processing module:
+
+3 BCS (Boolean Control Structures):
+
+BCS1 (Payment validation): Independently determinable (TC=1).
+
+BCS2 (Inventory check): Dependent on DB state (TC=0).
+
+BCS3 (Discount calculation): Independently determinable (TC=1).
+
+TC = (1+0+1)/3 = 0.67 (moderate controllability) Action: Refactored BCS2 to mock database dependencies.
+
+b) Built-in Test (BIT) Mechanisms Added API test hooks to simulate payment failures.
+
+Used feature flags to isolate new functionality during testing.
+
+Remaining Defects Measurement
+
+We estimated residual defects using fault seeding and team comparison:
+a) Fault Seeding (Mills’ Method) Seeded Defects (N_s): 20.
+
+Detected Seeded Defects (n_s): 16.
+
+Detected Real Defects (n_d): 48.
+
+Nd
+( nd/ns ) × N s
+( 48 16 ) × 20
+60 total defects
+Nr =
+( Nd − nd ) + ( Ns − ns )
+( 60 − 48 ) + ( 20 − 16 ) =
+16 remaining defects
+Conclusion: ~16 undetected defects expected post-release.
+
+b) Phase Containment Effectiveness (PCE) For the Requirements Phase:
+
+P C E
+( Defects Removed Defects/Introduced ) × 100
+( 9/12 ) × 100
+75 % PCE=( Defects Introduced Defects Removed​)×100=( 12 9​)×100=75% Design Phase PCE: 42.9% (needed improvement via peer reviews).
 
 
 ##Object oriented metrics
